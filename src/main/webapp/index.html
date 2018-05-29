@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>ToDo Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Todo</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#todoList">홈</a></li>
+			<li><a href="#todoList">할 일</a></li>
+			<li><a href="#user">회원관리</a></li>
+		</ul>
+	</div>
+</nav>
+<div class="container" ng-app="todoApp">
+	<ng-view></ng-view>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script type="text/javascript" src="js/todo/app.js"></script>
+<script type="text/javascript" src="js/todo/controllers/TodoListController.js"></script>
+<script type="text/javascript" src="js/todo/controllers/TodoDetailController.js"></script>
+<script type="text/javascript" src="js/todo/services/TodoService.js"></script>
+</body>
+</html>
