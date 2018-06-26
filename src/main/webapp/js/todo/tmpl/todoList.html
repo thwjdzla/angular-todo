@@ -1,0 +1,55 @@
+<div class="row">
+	<h3>목록</h3>
+	
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			나의 할일
+			
+			<select ng-model="todo.rows" class="pull-right">
+				<option value="5">5개씩</option>
+				<option value="10">10개씩</option>
+				<option value="20">20개씩</option>
+			</select>
+			
+			<select ng-model="todo.sort" class="pull-right">
+				<option value="no">번호순</option>
+				<option value="title">제목순</option>
+				<option value="eventDate">날짜순</option>
+			</select>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>제목</th>
+					<th>날짜</th>
+					<th>완료여부</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody><!-- orderBy에 
+						'no'  : 오름차순
+						'-no' : 내림차순 
+						'eventDate'를 쓰면 날짜로 정렬된다. 
+						todo.sort는 변수가 아니라서 ''를 적지 않는다. 
+						limitTo:3  -- 상위 3개만 보여주겠다.
+						limitTo:todo.rows -- todo.rows만큼 보여주겠다.
+						-->
+				<tr ng-repeat="todo in todos | orderBy:todo.sort | limitTo:todo.rows">
+					<td>{{todo.no}}</td>
+					<td><a href="" ng-click="goDetail(todo.no)">{{todo.title}}</a></td>
+					<td>{{todo.eventDate}}</td>
+					<td><input type="checkbox" ng-model="todo.completed"></td>
+					<td>
+						<button class="btn btn-success btn-xs">완료</button>
+						<button class="btn btn-danger btn-xs">삭제</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="panel-footer">
+			<span>{{uncompletedTodosCount}} 개 남았습니다.</span>
+		</div>
+	</div>
+</div>
+

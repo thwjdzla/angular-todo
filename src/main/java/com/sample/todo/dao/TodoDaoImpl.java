@@ -17,11 +17,19 @@ public class TodoDaoImpl implements TodoDao {
 	private LinkedList<Todo> todos = new LinkedList<Todo>();
 	
 	public TodoDaoImpl() {
-		todos.addFirst(new Todo(getSeq(), "연습1", "연습1입니다.", true, "2018-05-30"));
-		todos.addFirst(new Todo(getSeq(), "연습2", "연습2입니다.", false, "2018-05-30"));
-		todos.addFirst(new Todo(getSeq(), "연습3", "연습3입니다.", true, "2018-05-30"));
-		todos.addFirst(new Todo(getSeq(), "연습4", "연습4입니다.", false, "2018-05-30"));
-		todos.addFirst(new Todo(getSeq(), "연습5", "연습5입니다.", true, "2018-05-30"));
+		todos.addFirst(new Todo(getSeq(), "장보기", "연습1입니다.", true, "2018-06-10"));
+		todos.addFirst(new Todo(getSeq(), "코드 리뷰하기", "연습2입니다.", false, "2018-06-02"));
+		todos.addFirst(new Todo(getSeq(), "프로젝트 시연 준비하기", "연습3입니다.", true, "2018-06-24"));
+		todos.addFirst(new Todo(getSeq(), "조별 회의 참관하기", "연습4입니다.", false, "2018-06-05"));
+		todos.addFirst(new Todo(getSeq(), "할일1", "연습10입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일2", "연습11입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일3", "연습12입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일4", "연습13입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일5", "연습14입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일6", "연습15입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일7", "연습16입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일8", "연습17입니다.", true, "2018-06-13"));
+		todos.addFirst(new Todo(getSeq(), "할일9", "연습18입니다.", true, "2018-06-13"));
 	}
 	
 	public int getSeq() {
